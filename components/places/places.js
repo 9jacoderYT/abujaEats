@@ -20,6 +20,7 @@ export default function Places({ places }) {
             <img
               src={place.main_image || "/avatar.jpeg"}
               //  src="/avatar.jpeg"
+              alt="logo"
               className="transition duration-700 z-2 h-[250px] md:h-[300px] w-full"
             />
 

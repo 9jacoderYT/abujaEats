@@ -31,7 +31,7 @@ export default function Home() {
 
       <div className="max-w-7xl mx-auto block md:flex bg-[#f2b203] p-5 space-x-5 my-10">
         <div>
-          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/0e/80/f6/caption.jpg?w=1000&h=-1&s=1" />
+          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/0e/80/f6/caption.jpg?w=1000&h=-1&s=1" alt="logo" />
         </div>
 
         <div className="mt-5 md:mt-0">
@@ -76,7 +76,7 @@ export default function Home() {
 
       <div className="max-w-7xl mx-auto block md:flex bg-[#f2f1ec] p-5 space-x-5 my-10">
         <div className="md:w-[50%]">
-          <img src="/images/1.jpg" className="h-[]" />
+          <img src="/images/1.jpg" alt="logo" />
         </div>
 
         <div className="mt-5 md:mt-0 w-[50%] md:my-auto">
