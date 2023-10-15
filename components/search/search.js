@@ -1,8 +1,8 @@
 import SearchIcon from "@mui/icons-material/Search";
 import { useEffect, useState } from "react";
 
-export default function Search({ results, setResults, places }: any) {
-  const [search, setSearch] = useState<any>("");
+export default function Search({ results, setResults, places }) {
+  const [search, setSearch] = useState("");
 
   const filteringSearch = () => {
     if (!search) {

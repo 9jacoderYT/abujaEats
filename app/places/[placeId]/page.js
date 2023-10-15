@@ -7,11 +7,7 @@ import Gallary from "@/components/carousel/index";
 import { places } from "@/lib/data";
 import { fetchPlace } from "@/lib/fetchData";
 
-export default async function PlacePage({
-  params,
-}: {
-  params: { placeId: string };
-}) {
+export default async function PlacePage({ params }) {
   const data = await fetchPlace(params.placeId);
 
   return (

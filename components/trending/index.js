@@ -46,47 +46,43 @@ export default function Trending() {
         speed={400}
       >
         {places.slice(0, 7).map((place, index) => (
-          
-            <Link href={`/places/${place.id}`} key={place.id}>
-              <div className="m-4 shadow-xl hover:cursor-pointer hover:underline bg-white w-[250px] md:w-[400px]">
-                <img
-                  src={place.main_image}
-                  className="w-full h-[250px] md:h-[350px]"
-                />
+          <Link href={`/places/${place.id}`} key={place.id}>
+            <div className="m-4 shadow-xl hover:cursor-pointer hover:underline bg-white w-[250px] md:w-[400px]">
+              <img
+                src={place.main_image}
+                className="w-full h-[250px] md:h-[350px]"
+                alt="logo"
+              />
 
-                <div className="p-4">
-                  <div className="text-xl font-medium lowercase hover:underline transition duration-700 truncate">
-                    {place.title}
-                  </div>
+              <div className="p-4">
+                <div className="text-xl font-medium lowercase hover:underline transition duration-700 truncate">
+                  {place.title}
+                </div>
 
-                  <div className="flex">
-                    <Rating
-                      name="text-feedback"
-                      value={place?.rating}
-                      readOnly
-                      precision={0.5}
-                      emptyIcon={
-                        <StarIcon
-                          style={{ opacity: 0.55 }}
-                          fontSize="inherit"
-                        />
-                      }
-                    />
+                <div className="flex">
+                  <Rating
+                    name="text-feedback"
+                    value={place?.rating}
+                    readOnly
+                    precision={0.5}
+                    emptyIcon={
+                      <StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />
+                    }
+                  />
 
-                    {place.rating > 2 ? (
-                      <Box sx={{ ml: 1, color: "green" }}>
-                        {labels[place?.rating]}
-                      </Box>
-                    ) : (
-                      <Box sx={{ ml: 1, color: "red" }}>
-                        {labels[place?.rating]}
-                      </Box>
-                    )}
-                  </div>
+                  {place.rating > 2 ? (
+                    <Box sx={{ ml: 1, color: "green" }}>
+                      {labels[place?.rating]}
+                    </Box>
+                  ) : (
+                    <Box sx={{ ml: 1, color: "red" }}>
+                      {labels[place?.rating]}
+                    </Box>
+                  )}
                 </div>
               </div>
-            </Link>
-          
+            </div>
+          </Link>
         ))}
       </Carousel>
     </div>

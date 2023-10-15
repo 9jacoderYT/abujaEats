@@ -11,12 +11,12 @@ import Category from "@/components/category";
 import { useState } from "react";
 
 export default function Home() {
-  const [type, setType] = useState<string>("all");
-  const [results, setResults] = useState<any>(places);
+  const [type, setType] = useState("all");
+  const [results, setResults] = useState(places);
 
   return (
-    <main className="">
-      <div className=" md:block font-bold text-3xl md:text-6xl text-center md:mt-24 md:mb-12 mt-10 mb-5">
+    <main>
+      <div className="md:block font-bold text-3xl md:text-6xl text-center md:mt-24 md:mb-12 mt-10 mb-5">
         Where to?
       </div>
 
@@ -84,7 +84,7 @@ export default function Home() {
             About AbujaEats
           </p>
           <p className="text-lg font-light text-white mt-10 md:mt-0 text-center">
-            Follow us on our journey around Abuja's food destinations.
+            Follow us on our journey around Abujas food destinations.
             <br />
             <button className="btn mt-3">Donate now</button>
           </p>

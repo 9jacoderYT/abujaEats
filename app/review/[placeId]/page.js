@@ -3,11 +3,7 @@ import { fetchPlace } from "@/lib/fetchData";
 
 import CreateReview from "@/components/createReview/index";
 
-export default async function ReviewPage({
-  params,
-}: {
-  params: { placeId: string };
-}) {
+export default async function ReviewPage({ params }) {
   const data = await fetchPlace(params.placeId);
 
   return (

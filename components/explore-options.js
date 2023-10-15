@@ -8,7 +8,7 @@ export default function ExploreOptions() {
 
         <div className="w-[1000px]">
           <div className="w-[30%]">
-            <img src="https://d1ralsognjng37.cloudfront.net/4e68015e-239a-4c0b-8b01-9010697fa4c3.jpeg" />
+            <img src="https://d1ralsognjng37.cloudfront.net/4e68015e-239a-4c0b-8b01-9010697fa4c3.jpeg" alt="logo" />
             <div className="p-5">
               Street food refers to food or drinks sold by a hawker or vendor on
               a street or at other public places, such as markets, fairs, and
