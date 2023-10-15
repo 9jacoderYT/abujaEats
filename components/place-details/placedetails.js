@@ -2,6 +2,7 @@
 import Reviews from "./reviewsBox";
 import About from "./aboutBox";
 import Contact from "./contactBox";
+import Twitter from "../socials/twitter";
 
 export default function PlaceDetails({ data }) {
   return (

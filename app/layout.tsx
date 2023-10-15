@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import NavbarSimple from "@/components/navbar/index";
 import Footer from "@/components/footer/index";
+import Navbar from "@/components/navbar/navbar-second"
 
 const inter = Inter({ subsets: ["vietnamese"] });
 
@@ -22,8 +23,15 @@ export default function RootLayout({
         <div className="border-b border-1 shadow-sm mb-5 md:mb-0">
           <NavbarSimple />
         </div>
+        <div className="border-b border-1 shadow-sm mb-5 md:mb-0">
+          <Navbar />
+        </div>
 
-        <div className="z-2">{children}</div>
+
+        <div>{children}</div>
+
+       
+
         <Footer />
       </body>
     </html>
