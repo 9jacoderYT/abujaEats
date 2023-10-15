@@ -40,7 +40,7 @@ export default function SearchBox({
           <span
             onClick={() => {
               setType("resturants");
-              const newResult = results.filter((result: any) => {
+              const newResult = results.filter((result) => {
                 return result.type == "restaurant";
               });
               setResults(newResult);
@@ -59,7 +59,7 @@ export default function SearchBox({
             onClick={() => {
               setType("streetfood");
 
-              const newResult = results.filter((result: any) => {
+              const newResult = results.filter((result) => {
                 return result.type == "streetfood";
               });
               setResults(newResult);
@@ -77,7 +77,7 @@ export default function SearchBox({
           <span
             onClick={() => {
               setType("bar");
-              const newResult = results.filter((result: any) => {
+              const newResult = results.filter((result) => {
                 return result.type == "bar";
               });
               setResults(newResult);
@@ -96,7 +96,7 @@ export default function SearchBox({
           <span
             onClick={() => {
               setType("loudge");
-              const newResult = results.filter((result: any) => {
+              const newResult = results.filter((result) => {
                 return result.type == "loudge";
               });
               setResults(newResult);
