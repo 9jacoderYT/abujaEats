@@ -46,7 +46,7 @@ export default function Trending() {
         speed={400}
       >
         {places.slice(0, 7).map((place, index) => (
-          <>
+          
             <Link href={`/places/${place.id}`} key={place.id}>
               <div className="m-4 shadow-xl hover:cursor-pointer hover:underline bg-white w-[250px] md:w-[400px]">
                 <img
@@ -86,7 +86,7 @@ export default function Trending() {
                 </div>
               </div>
             </Link>
-          </>
+          
         ))}
       </Carousel>
     </div>
