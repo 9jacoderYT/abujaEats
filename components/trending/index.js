@@ -31,7 +31,7 @@ export default function Trending() {
         activeSlideIndex={activeSlide}
         activeSlideProps={{
           style: {
-            background: "blue",
+            background: "",
           },
         }}
         onRequestChange={setActiveSlide}
