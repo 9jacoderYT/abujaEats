@@ -47,10 +47,10 @@ export default function Trending() {
       >
         {places.slice(0, 7).map((place, index) => (
           <Link href={`/places/${place.id}`} key={place.id}>
-            <div className="m-4 shadow-xl hover:cursor-pointer hover:underline bg-white w-[200px] md:w-[300px]">
+            <div className="m-4 shadow-xl hover:cursor-pointer hover:underline bg-white w-[200px] md:w-[200px]">
               <img
                 src={place.main_image}
-                className="w-full h-[200px] md:h-[300px]"
+                className="w-full h-[200px] md:h-[200px]"
                 alt="logo"
               />
 

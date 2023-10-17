@@ -15,7 +15,7 @@ import { Pagination } from "@mui/material";
 
 export default function Home() {
   const [type, setType] = useState("restaurant");
-  const [results, setResults] = useState(null);
+  const [results, setResults] = useState(places);
 
   return (
     <main>
@@ -33,12 +33,12 @@ export default function Home() {
 
       <Places places={results} />
 
-      <div className="mx-auto max-w-6xl justify-center">
+      <div className="mx-auto max-w-5xl justify-center">
         <Pagination count={10} color="primary" sx={{ margin: "0 auto" }} />
       </div>
 
       <div className="bg-white">
-        <div className="mx-auto max-w-7xl p-2">
+        <div className="mx-auto max-w-5xl p-2">
           <div className="mt-4">
             <div className="text-xl font-bold">Upcoming Events</div>
             <div className="text-sm font-light text-green-500">
@@ -56,7 +56,22 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto block md:flex bg-[#f2b203] p-5 space-x-5 my-10">
+      {/* Trending */}
+
+      <div className="bg-[#faf1ed]  my-5">
+        <div className="mx-auto max-w-5xl p-2">
+          <div className="m-3">
+            <div className="text-lg md:text-2xl font-medium">
+              Top Ranking Resturants
+            </div>
+            <div className="text-sm font-light">Based on customers ratings</div>
+          </div>
+
+          <Trending />
+        </div>
+      </div>
+
+      <div className="max-w-5xl mx-auto block md:flex bg-[#f2b203] p-5 space-x-5 my-10">
         <div>
           <img
             src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/0e/80/f6/caption.jpg?w=1000&h=-1&s=1"
@@ -77,38 +92,6 @@ export default function Home() {
           </p>
         </div>
       </div>
-
-      {/* Trending */}
-
-      <div className="bg-[#faf1ed]  my-5">
-        <div className="mx-auto max-w-7xl p-2">
-          <div className="m-3">
-            <div className="text-lg md:text-2xl font-medium">
-              Top Ranking Resturants
-            </div>
-            <div className="text-sm font-light">Based on customers ratings</div>
-          </div>
-
-          <Trending />
-        </div>
-      </div>
-
-      {/* <div className="max-w-7xl mx-auto block md:flex bg-[#f2f1ec] p-5 space-x-5 my-10">
-        <div className="md:w-[50%]">
-          <img src="/images/1.jpg" alt="logo" />
-        </div>
-
-        <div className="mt-5 md:mt-0 w-[50%] md:my-auto">
-          <p className="text-3xl font-bold text-black mb-5 text-center">
-            About AbujaEats
-          </p>
-          <p className="text-lg font-light text-white mt-10 md:mt-0 text-center">
-            Follow us on our journey around Abujas food destinations.
-            <br />
-            <button className="btn mt-3">Donate now</button>
-          </p>
-        </div> 
-      </div> */}
     </main>
   );
 }

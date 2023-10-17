@@ -13,7 +13,7 @@ export default function Category() {
             <img
               src={`/images/${event.name}`}
               alt="Streetfood"
-              className="rounded-lg h-[300px] hover:cursor-pointer"
+              className="rounded-lg h-[200px] md:h-[300px] hover:cursor-pointer"
               onClick={() => {
                 setDetails(event);
               }}

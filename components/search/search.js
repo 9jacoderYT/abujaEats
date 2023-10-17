@@ -36,8 +36,8 @@ export default function Search({ results, setResults, places }) {
   }, [search]);
 
   return (
-    <div className="m-3">
-      <div className="max-w-3xl md:flex mx-auto p-3 border border-2 rounded-lg md:rounded-full shadow-lg bg-white">
+    <div className="m-2">
+      <div className="max-w-2xl md:flex mx-auto p-1 border border-2 rounded-lg md:rounded-full shadow-lg bg-white">
         <div className="flex-1 flex border-b-2 mb-5 md:border-b-0 md:mb-0">
           <span className="my-auto ml-2">
             <SearchIcon className="text-4xl" />
@@ -45,13 +45,13 @@ export default function Search({ results, setResults, places }) {
 
           <input
             type="text"
-            className=" flex-1 p-4 md:p-3 outline-none text-xl placeholder-shown:border-black  md:rounded-full"
-            placeholder="Destination"
+            className=" flex-1 p-3 md:p-3 outline-none text-xl placeholder-shown:border-black  md:rounded-full"
+            placeholder="Name of Restaurant"
             onChange={(event) => setSearch(event.target.value)}
           />
         </div>
 
-        <button className="bg-[#34e0a1] p-4 rounded-full md:rounded-full text-xl font-bold w-full md:w-auto">
+        <button className="bg-[#34e0a1] p-3 rounded-full md:rounded-full text-xl font-bold w-full md:w-auto">
           Search
         </button>
       </div>

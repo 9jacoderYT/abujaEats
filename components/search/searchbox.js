@@ -8,7 +8,7 @@ import WeekendOutlinedIcon from "@mui/icons-material/WeekendOutlined";
 export default function SearchBox({ type, setType, results, setResults }) {
   return (
     <div className="auto-scroll overflow-x-scroll ">
-      <div className="flex justify-center w-[750px] md:w-[800px] text-2xl space-x-5 md:mx-auto pb-5">
+      <div className="flex justify-center w-[700px] text-2xl space-x-5 md:mx-auto pb-5">
         <div
           className={`nav_bar_components ${
             type == "all" ? "border-gray-600" : ""
