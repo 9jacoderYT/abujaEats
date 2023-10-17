@@ -18,13 +18,9 @@
 
 @layer components {
   .nav_bar_components {
-    @apply space-x-2 hover:border-gray-600 border-white border-b py-2 hover:cursor-pointer font-light text-lg md:text-2xl;
+    @apply space-x-2 hover:border-gray-600 border-white border-b py-2 hover:cursor-pointer font-light text-lg md:text-lg;
   }
   .nav_bar_components_secondary {
     @apply hover:border-gray-600 text-gray-800 border-white border-b pt-1 hover:cursor-pointer font-light text-lg md:text-lg;
   }
-}
-
-body {
-  /* background-color: #ededed; */
 }

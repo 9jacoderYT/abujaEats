@@ -1,10 +1,10 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, Tilt_Neon } from "next/font/google";
 import NavbarSimple from "@/components/navbar/index";
 import Footer from "@/components/footer/index";
 import Navbar from "@/components/navbar/navbar-second";
 
-const inter = Inter({ subsets: ["vietnamese"] });
+const inter = Tilt_Neon({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -15,12 +15,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="border-b border-1 shadow-sm mb-5 md:mb-0">
+        <div className="md:border-b md:border-1 md:shadow-sm mb-5 md:mb-0">
           <NavbarSimple />
         </div>
-        <div className="border-b border-1 shadow-sm mb-5 md:mb-0">
+        {/* <div className="border-b border-1 shadow-sm mb-5 md:mb-0">
           <Navbar />
-        </div>
+        </div> */}
 
         <div>{children}</div>
 

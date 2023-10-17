@@ -1,40 +1,45 @@
 "use client";
+import { events } from "@/lib/events";
+import { useState } from "react";
 
 export default function Category() {
+  const [details, setDetails] = useState(events[0]);
+
   return (
     <>
-      <div className="carousel rounded-box">
-        <div className="carousel-item block m-2">
+      <div className="carousel">
+        {events.map((event, index) => (
+          <div className="carousel-item block m-2" key={index}>
+            <img
+              src={`/images/${event.name}`}
+              alt="Streetfood"
+              className="rounded-lg h-[300px] hover:cursor-pointer"
+              onClick={() => {
+                setDetails(event);
+              }}
+            />
+          </div>
+        ))}
+      </div>
+      <br />
+
+      <div className="max-w-7xl mx-auto block md:flex bg-[#fff7e1] p-4 space-x-5 mt-3">
+        <div>
           <img
-            src="https://www.withinnigeria.com/piece/wp-content/uploads/sites/9/word-image-2642-2.png"
-            alt="Streetfood"
-            className="rounded-lg h-[200px] lg:h-[300px]"
+            src={`/images/${details.name}`}
+            alt="logo"
+            className="rounded-lg"
           />
-          <div className="text-xl font-bold mt-2">#Street Food</div>
         </div>
-        <div className="carousel-item block m-2">
-          <img
-            src="https://nairametrics.com/wp-content/uploads/2022/07/Kapadoccia-.jpg"
-            alt="Resturants"
-            className="rounded-lg h-[200px] lg:h-[300px]"
-          />
-          <div className="text-xl font-bold mt-2">#Resturants</div>
-        </div>
-        <div className="carousel-item block m-2">
-          <img
-            src="https://www.realsimple.com/thmb/6r6EVnkDyDSiFjKOE5EXLmb-f3g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/types-of-grills-2000-708ebb6994e64c09a6b87ca2556c2c66.jpg"
-            alt="Grill"
-            className="rounded-lg h-[200px] lg:h-[300px]"
-          />
-          <div className="text-xl font-bold mt-2">#Grill</div>
-        </div>
-        <div className="carousel-item block m-2">
-          <img
-            src="https://attenvo.com/blog/wp-content/uploads/2022/09/The-Pasha-Abuja-edited.jpg"
-            alt="Grill"
-            className="rounded-lg h-[200px] lg:h-[300px]"
-          />
-          <div className="text-xl font-bold mt-2">#Outdoor</div>
+
+        <div className="mt-5 md:mt-0">
+          <div className="text-5xl font-extrabold text-black mb-5 text-left border-b-2 border-black pb-5">
+            {details.title}
+          </div>
+          <p className="text-xl font-light text-title md:mt-0 text-left">
+            {details.details}
+          </p>
+          <p className="mt-3 text-2xl">Date : {details.date}</p>
         </div>
       </div>
     </>

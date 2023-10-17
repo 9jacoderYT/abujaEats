@@ -1,26 +1,20 @@
 "use client";
-import HomeIcon from "@mui/icons-material/Home";
-import TrafficIcon from "@mui/icons-material/Traffic";
-import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
-import LocalBarIcon from "@mui/icons-material/LocalBar";
-import WeekendIcon from "@mui/icons-material/Weekend";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+import TrafficOutlinedIcon from "@mui/icons-material/TrafficOutlined";
+import RamenDiningOutlinedIcon from "@mui/icons-material/RamenDiningOutlined";
+import LocalBarOutlinedIcon from "@mui/icons-material/LocalBarOutlined";
+import WeekendOutlinedIcon from "@mui/icons-material/WeekendOutlined";
 
-
-export default function SearchBox({
-  type,
-  setType,
-  results,
-  setResults,
-}) {
+export default function SearchBox({ type, setType, results, setResults }) {
   return (
-    <div className="auto-scroll overflow-x-scroll text-gray-700">
-      <div className="flex justify-center w-[700px] md:w-[800px] text-2xl space-x-5 md:mx-auto">
+    <div className="auto-scroll overflow-x-scroll ">
+      <div className="flex justify-center w-[750px] md:w-[800px] text-2xl space-x-5 md:mx-auto pb-5">
         <div
           className={`nav_bar_components ${
             type == "all" ? "border-gray-600" : ""
           }`}
         >
-          <HomeIcon />
+          <HomeOutlinedIcon />
           <span
             onClick={() => {
               setType("all");
@@ -36,10 +30,10 @@ export default function SearchBox({
             type == "resturants" ? "border-gray-600" : ""
           }`}
         >
-          <RestaurantMenuIcon />
+          <RamenDiningOutlinedIcon />
           <span
             onClick={() => {
-              setType("resturants");
+              setType("restaurant");
               const newResult = results.filter((result) => {
                 return result.type == "restaurant";
               });
@@ -54,7 +48,7 @@ export default function SearchBox({
             type == "streetfood" ? "border-gray-600" : ""
           }`}
         >
-          <TrafficIcon />
+          <TrafficOutlinedIcon />
           <span
             onClick={() => {
               setType("streetfood");
@@ -73,7 +67,7 @@ export default function SearchBox({
             type == "bar" ? "border-gray-600" : ""
           }`}
         >
-          <LocalBarIcon />
+          <LocalBarOutlinedIcon />
           <span
             onClick={() => {
               setType("bar");
@@ -91,7 +85,7 @@ export default function SearchBox({
             type == "loudge" ? "border-gray-600" : ""
           }`}
         >
-          <WeekendIcon />
+          <WeekendOutlinedIcon />
 
           <span
             onClick={() => {

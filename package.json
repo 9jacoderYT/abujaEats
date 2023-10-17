@@ -30,6 +30,7 @@
     "tailwindcss": "3.3.3"
   },
   "devDependencies": {
-    "daisyui": "^3.7.7"
+    "daisyui": "^3.7.7",
+    "typescript": "5.2.2"
   }
 }
