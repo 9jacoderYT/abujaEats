@@ -6,6 +6,7 @@ import { places } from "@/lib/data";
 
 import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
+import RadioGroupRating from "@/lib/rating";
 
 import Box from "@mui/material/Box";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
@@ -47,38 +48,37 @@ export default function Trending() {
       >
         {places.slice(0, 7).map((place, index) => (
           <Link href={`/places/${place.id}`} key={place.id}>
-            <div className="m-4 shadow-xl hover:cursor-pointer hover:underline bg-white w-[200px] md:w-[200px]">
+            <div className="m-1 p-1 border border-2 rounded-lg  hover:cursor-pointer hover:underline bg-white">
               <img
-                src={place.main_image}
-                className="w-full h-[200px] md:h-[200px]"
+                src={place.main_image || "/avatar.jpeg"}
+                //  src="/avatar.jpeg"
                 alt="logo"
+                className="transition duration-700 h-[200px] z-2 w-full rounded-lg"
               />
 
-              <div className="p-4">
-                <div className="text-xl font-medium lowercase hover:underline transition duration-700 truncate">
+              <div className="px-2">
+                <div className="text-md md:text-lg font-medium lowercase hover:underline transition duration-700 truncate">
                   {place.title}
                 </div>
 
                 <div className="flex">
-                  <Rating
-                    name="text-feedback"
-                    value={place?.rating}
-                    readOnly
-                    precision={0.5}
-                    emptyIcon={
-                      <StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />
-                    }
-                  />
+                  <RadioGroupRating value={place?.rating} />
 
-                  {place.rating > 2 ? (
-                    <Box sx={{ ml: 1, color: "green" }}>
-                      {labels[place?.rating]}
-                    </Box>
-                  ) : (
-                    <Box sx={{ ml: 1, color: "red" }}>
-                      {labels[place?.rating]}
-                    </Box>
-                  )}
+                  <span className="hidden md:inline my-auto">
+                    {place.rating > 2 ? (
+                      <Box sx={{ ml: 1, color: "green" }} className="text-sm">
+                        {labels[place?.rating]}
+                      </Box>
+                    ) : (
+                      <Box sx={{ ml: 1, color: "red" }} className="text-sm">
+                        {labels[place?.rating]}
+                      </Box>
+                    )}
+                  </span>
+                </div>
+
+                <div className=" p-1 rounded-full text-sm">
+                  {place.location && <span>📍 {place.location}</span>}
                 </div>
               </div>
             </div>
